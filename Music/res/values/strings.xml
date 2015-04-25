@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Music</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="itemdelete_ok">OK</string>
+    <string name="exit_ok">OK</string>
+    <string name="exit_cancle">Cancel</string>
+    <string name="itemdelete_cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="login">Login</string>
+    <string name="quit">Quit</string>
+    <string name="signin">Sign In</string>
+    <string name="youraccount">your account</string>
+    <string name="password">Password</string>
+    <string name="new_account">New Account</string>
+    <string name="show_password">Display Password</string>
+    <string name="yourpassword">your password</string>
+    <string name="password_again">your password again</string>
+    <string name="accountname">your account name</string>
+    <string name="email_adress">your email address</string>
+    <string name="register">Register</string>
+    <string name="musicname">musicname</string>
+    <string name="duration">duration</string>
+    <string name="currenttime">currenttime</string>
+    <string name="signout">Sign Out</string>
+    
+
+</resources>
