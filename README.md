@@ -13,10 +13,15 @@
 2.2 创建数据库
 
    本软件数据库用于用户账户信息的存储和查询。数据有4个字段，分别为_id，username，password，email。其中_id是用户id，是依次自动生成的；username是用户名，password是用户密码，email是用户邮箱。
+   
          数据项                 类型
+         
          _ID                    INTEGER
+         
          UERNAME                TEXT
+         
          PASSWORD               TEXT
+         
          EMAIL                  TEXT
          
    创建数据库我们通过继承SQLiteOpenHelper类来实现，在onCreate的时候创建了数据库。在MyContentProvider类创建的时候生成MainDatabaseHelper的实例，之后我们就可以通过MianDatabaseHelper来获得可用于读或写的数据库了。这是通过mOpenHelper.getWritableDatabase()或mOpenHelper.getReadableDatabase()来实现的。
@@ -48,6 +53,7 @@
 四.模块结构
 
    模块结构是从主Activity（列表界面）开始，通过用户点击ListView或者button跳转到其他用于显示模块。同时显示模块绑定服务模块或者Provider。由于Activity绑定Service在onCreate中完成，所以列表界面会从2种状态从新进入。一种是回退到主界面，Activity已经销毁，重新加载UI需要在onServiceConnected中完成。如果进入下一个界面，Activity处于onPause状态，重新进入可以在onResume完成UI加载。
+   
    列表界面和播放界面在启动时绑定播放服务，通过aidl与其通信，因为在界面加载UI要从播放服务中获取内容。登录界面在登录成功后会跳转到列表界面，并显示登录用户信息。在注册界面中，有用户名重复检测，信息完整检测，密码确认检测，邮箱正则表达式检测。注册成功会跳转到登录界面并自动填充登录信息。
 
 
