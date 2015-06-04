@@ -331,6 +331,7 @@ public class SecActivity extends Activity {
     protected void onDestroy() {
         super.onDestroy();
         unbindService(conn);
+        this.unregisterReceiver(mBroadcastReceiver);
     }
 
     // handler the new thread to updata UI

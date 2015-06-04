@@ -77,6 +77,7 @@ public class MainActivity extends Activity {
         mNewFragment = new MyFragment();
         // bind MyService
         Intent intent = new Intent(this, MySevice.class);
+        this.startService(intent);
         bindService(intent, conn, BIND_AUTO_CREATE);
         // get fragment information from LoginActivity
         Intent signin = this.getIntent();
@@ -182,6 +183,7 @@ public class MainActivity extends Activity {
         super.onDestroy();
         // unbindService
         unbindService(conn);
+        this.unregisterReceiver(mBroadcastReceiver);
         Log.i(TAG, "onDestroy");
     }
 

@@ -45,7 +45,7 @@
         <service 
             android:exported="true"
             android:name="com.lipengwei.music.MySevice"></service>
-        <provider android:name="com.lipengwei.music.MyContentProvider" android:authorities="com.example.music.provider"></provider>
+        <provider android:name="com.lipengwei.music.MyContentProvider" android:authorities="com.lipengwei.music.provider"></provider>
     </application>
 
 </manifest>
